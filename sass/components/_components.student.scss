@@ -1,0 +1,22 @@
+$margin: 5px;
+
+.student {
+  background: #9da0a4;
+  width: 300px;
+  min-height: 10px;
+  margin-bottom: $margin;
+  color: white;
+  padding: $margin;
+
+  &__name {
+    display: inline;
+    margin-right: $margin;
+  }
+
+  &__age {
+    display: inline;
+    background: black;
+    padding: $margin;
+  }
+
+}
