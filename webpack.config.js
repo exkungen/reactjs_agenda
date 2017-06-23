@@ -44,8 +44,7 @@ module.exports = {
     plugins : [
         // Simply copies the files over
         new CopyWebpackPlugin([
-            { from : dir_html },
-            { from : dir_img, to : 'img' }
+            { from : dir_html }
         ]),
         // Avoid publishing files when compilation fails
         new webpack.NoErrorsPlugin(),
