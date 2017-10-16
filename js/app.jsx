@@ -1,5 +1,6 @@
 import React from 'react';
 import Student from './components/student';
+import StudentDetail from './components/studentdetail';
 
 /**
  * App component
@@ -58,7 +59,8 @@ class App extends React.Component {
 
         this.state = {
             title : 'MD2 React',
-            currentStudents : this.students
+            currentStudents : this.students,
+            currentStudent : undefined
         };
     }
 
@@ -67,24 +69,42 @@ class App extends React.Component {
         this.setState({currentStudents: filteredStudents});
     }
 
+    deleteStudent(student){
+        const index = this.students.indexOf(student);
+        this.students.splice(index, 1);
+        this.setState({currentStudents : this.students});
+    }
+
+    renderSearch(){
+        return (
+            <div>
+                <input
+                    type="text"
+                    onChange={(e) => this.filterStudents(e.target.value)}
+                />
+            </div>
+        );
+    }
+
+    selectStudent(student){
+        this.setState({currentStudent : student});
+    }
+
     render() {
         return (
             <div className="app">
-                <div>
-                    <input
-                        type="text"
-                        onChange={(e) => this.filterStudents(e.target.value)}
-                    />
-                </div>
+                {this.renderSearch()}
                 {this.state.title}<br />
                 Er zijn nu {this.state.currentStudents.length} leerlingen
                 {this.state.currentStudents.map(student => (
                     <Student
                         name={student.name}
                         age={student.age}
-                        onSelect={() => console.log(student)}
+                        onSelect={() => this.selectStudent(student)}
+                        onDelete={() => this.deleteStudent(student)}
                     />
                 ))}
+                <StudentDetail selectedStudent={this.state.currentStudent}/>
             </div>
         );
     }
