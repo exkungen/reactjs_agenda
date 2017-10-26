@@ -1,52 +1,34 @@
 {
-  "name": "placering",
+  "name": "webpack-demo",
   "version": "1.0.0",
-  "description": "Placerings module",
+  "description": "",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jewellance/plazering.git"
-  },
   "scripts": {
-    "build": "webpack",
-    "release": "webpack -p",
-    "watch": "webpack --watch",
-    "start": "webpack-dev-server --hot --inline --host 0.0.0.0",
-    "lint": "eslint js/",
-    "test": "babel-tape-runner test/**/*.spec.js | faucet"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
   },
-  "devDependencies": {
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.7",
-    "babel-polyfill": "^6.16.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-2": "6.24.1",
-    "babel-tape-runner": "^2.0.1",
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.26.0",
-    "eslint": "^3.12.2",
-    "eslint-config-airbnb": "^13.0.0",
-    "eslint-import-resolver-webpack": "^0.8.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.8.0",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "faucet": "0.0.1",
-    "node-sass": "^3.13.0",
-    "sass-loader": "^4.0.2",
-    "sinon": "^1.17.7",
-    "style-loader": "^0.13.1",
-    "tape": "^4.6.3",
-    "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
-  },
-  "author": "Berend Weij",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "css-loader": "0.28.7",
+    "extract-text-webpack-plugin": "3.0.0",
+    "html-webpack-plugin": "2.30.1",
+    "node-sass": "4.5.3",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.18.2",
+    "webpack": "3.6.0",
+    "webpack-dev-server": "2.8.2"
+  },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "socket.io-client": "^1.7.3"
+    "classnames": "2.2.5"
   }
 }
