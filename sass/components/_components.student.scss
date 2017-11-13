@@ -1,6 +1,6 @@
-$margin: 5px;
+$margin: 6px;
 
-.student {
+.agenda {
   transition: 0.1s all ease-in-out;
   background: #9da0a4;
   width: 300px;
@@ -12,17 +12,25 @@ $margin: 5px;
   cursor: pointer;
 
 
-  &__name {
+  &__time {
     display: inline;
     margin-right: $margin;
+    margin-left: 3px;
   }
 
-  &__age {
+  &__day {
     display: inline;
     background: black;
     padding: $margin;
+    color: white;
+    font-weight: bold;
   }
-
+  &__arrangement {
+    display: inline;
+    padding: $margin;
+    color: white;
+    margin-left: 5px;
+  }
   &__delete {
     position: absolute;
     padding: $margin;
@@ -31,6 +39,10 @@ $margin: 5px;
     right:0px;
     cursor: pointer;
     background: red;
+    color: white;
+  }
+  &__delete:hover {
+    font-weight: bold;
   }
 
   &:hover {

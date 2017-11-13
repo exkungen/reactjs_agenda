@@ -20,6 +20,12 @@ class Student extends React.Component {
                 <div className="student__age">
                     {this.props.age}
                 </div>
+                <div className="student__adres">
+                    {this.props.adres}
+                </div>
+                <div className="student__delete">
+                    {this.props.delete}
+                </div>
             </div>
         );
     }
