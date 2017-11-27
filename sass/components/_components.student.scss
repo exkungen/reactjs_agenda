@@ -23,6 +23,7 @@ $margin: 6px;
     background: black;
     padding: $margin;
     color: white;
+
     font-weight: bold;
   }
   &__arrangement {
@@ -30,6 +31,7 @@ $margin: 6px;
     padding: $margin;
     color: white;
     margin-left: 5px;
+
   }
   &__delete {
     position: absolute;

@@ -1,0 +1,13 @@
+.button {
+  position: fixed;
+  background: red;
+  color: deepskyblue;
+  padding: 30px;
+  z-index: 11000;
+  transition: .2s ease-in-out;
+}
+.button:hover{
+  background: black;
+  color: white;
+  transition: .2s ease-in-out;
+}

@@ -1,17 +1,14 @@
 import React from 'react';
 
-/**
- * Student component
- * @param props
- * @returns {XML}
- */
 class Student extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
+    
 
     render() {
+
+        // hier mogen we lekker coderen
+        console.log(this.props);
+
         return (
             <div className="student">
                 <div className="student__name">
@@ -31,5 +28,4 @@ class Student extends React.Component {
     }
 
 }
-
 export default Student;
